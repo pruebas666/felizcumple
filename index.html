@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+      body
+{
+  background-image: linear-gradient(to right top, #002f6c, #01579b, #0277BD, #00b0ff, #4FC3F7);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+	 position: relative;
+	 width: 300px;
+	 height: 425px;
+	 border: 10px solid #0B2C75;
+	 margin: 60px auto 0 auto;
+	 box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+	 background-color: #e6f0e6;
+}
+ .card .text-container {
+	 width: 80%;
+	 height: 80%;
+	 margin: auto;
+}
+ .strikethrough {
+	 text-decoration: line-through;
+}
+ .card .text-container #head {
+	 font-family: 'Itim', sans-serif;
+	 font-size: 1.5em;
+	 margin: 30px auto 30px auto;
+}
+ .card p {
+	 font-size: 1.1em;
+	 line-height: 1.4;
+	 font-family: 'Itim', cursive;
+	 color: #331717;
+	 font-style: italic;
+	 text-align: center;
+	 margin: 30px auto 0px auto;
+}
+ .card .front {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: -10px 0px 0px -10px;
+	 border: 10px solid #0B2C75;
+	 backface-visibility: hidden;
+	 background-color: #0B2C75;
+	/* background-image: url($cover-image);
+	 */
+	 background-size: contain;
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+}
+ .card:hover .front {
+	 transform: perspective(800px) rotateY(-170deg);
+	 background-color: #41718d;
+}
+ .card:hover .back {
+	 transform: perspective(800px) rotateY(-170deg);
+	 box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	 background-color: #d2dcd2;
+}
+ .card .back {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 border: 10px solid #0B2C75;
+	 margin: -10px 0px 0px -10px;
+	 backface-visibility: visible;
+	 filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+	 background-color: #e6f0e6;
+	 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.imgset
+{
+  position: relative;
+  z-index: 1;
+  margin-bottom: -215px;
+}
+.imgset img
+{
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.titulo{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-size:1.7rem !important;
+	color:#fff !important;
+	margin-bottom: .9rem !important;
+	margin-top: 0.4rem !important;
+}
+
+@media screen and (max-width: 40rem){ 
+	.card {
+
+	 width: 150px;
+	 height: 212.5px;
+	 margin: 60px 10px 0 auto;
+}
+
+.card .text-container #head {
+	 
+	 font-size: 0.7em;
+	 margin: 20px auto 10px auto;
+}
+
+.card p {
+	 font-size: 0.6em;
+	 
+	 font-family: 'Itim', cursive;
+	 color: #331717;
+	 font-style: italic;
+	 text-align: center;
+	 margin: 10px auto 0px auto;
+}
+
+.titulo{
+	font-size:.8em !important;
+	margin-bottom: .8em !important;
+}
+
+
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="card">
+      <div class="back">
+        <img  src="ddd.svg">
+
+      </div>
+      <div class="front">
+        <div class="imgset" style="text-align: center;" >
+			<p class="titulo">La Familia Vizcardina le desea un Feliz cumpleaños </p>
+			<img width="55%" src="escudoOriginalV2.png" />
+           </div>
+      </div>
+      <div class="text-container">
+        <p id="head">Feliz Cumpleaños Marleny Vicente Mallque </p>
+        <p>Sra. Directora hoy mas que nunca sus colegas y compañeros le damos
+          nuestras mas sinceras felicitaciones por su cumpleaños,
+          y ser una persona muy humanitaria.
+        </p>
+        <p>Esperamos siga cosechando muchos exitos!</p>
+      </div>
+    </div>
+
+    </body>
+</html>
